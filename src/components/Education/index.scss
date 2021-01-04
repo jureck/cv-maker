@@ -1,0 +1,118 @@
+.education {
+    
+    &__container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-align: center;
+        width: 100vw;
+        font-size: 31px;
+    }
+
+    &__modal {
+        z-index: 10;
+        width: 100vw;
+        position: fixed;
+        height: 100%;
+        background-color: #F5F5F5;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0px;
+    
+        &.hidden {  
+            display: none;
+        }
+    
+        & .form__controls {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+.plus__button {
+    background-color: #C4C4C4;
+    width: 55px;
+    height: 55px;
+    border-radius: 35px;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 6px;
+        background-color: white;
+        width: 25px;
+        transform: translate(15px, 24px);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 6px;
+        background-color: white;
+        width: 25px;
+        transform: translate(15px, 18px) rotate(90deg);
+    }
+}
+
+.school {
+    width: 85%;
+    min-height: 60px;
+    border: 2px solid #B7B7B7;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    @media (min-width: 700px) {
+        width: 40vw;
+    }
+
+    &:hover {
+        filter: brightness(0.4);
+
+        &::after {
+            content: 'DELETE';
+            position: absolute;
+            color: rgb(56, 56, 56);
+            font-size: 35px;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            left: 0;
+            top: 25%;
+        }
+    }
+
+    &__major {
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 2px;
+    }
+
+    &__name {
+        margin: 0;
+    }
+
+    &__years {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & .form__input {
+            width: 45%;
+        }
+    
+        &-info {
+            margin: 0;
+            margin-bottom: 3px;
+        }
+    }
+}

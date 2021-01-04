@@ -1,0 +1,19 @@
+.dot {
+    display: block;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid #A4A4A4;
+    width: 12px;
+    height: 12px;
+    margin: 0px 5px;
+
+    &.filled {
+        background-color: #2B3A67;
+    }
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+}
