@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cv-maker/static/css/main.8726a5c8.chunk.css",
+    "main.js": "/cv-maker/static/js/main.c928b046.chunk.js",
+    "main.js.map": "/cv-maker/static/js/main.c928b046.chunk.js.map",
+    "runtime-main.js": "/cv-maker/static/js/runtime-main.6a7f63d1.js",
+    "runtime-main.js.map": "/cv-maker/static/js/runtime-main.6a7f63d1.js.map",
+    "static/js/2.cb3bc251.chunk.js": "/cv-maker/static/js/2.cb3bc251.chunk.js",
+    "static/js/2.cb3bc251.chunk.js.map": "/cv-maker/static/js/2.cb3bc251.chunk.js.map",
+    "index.html": "/cv-maker/index.html",
+    "precache-manifest.f0bd80df70286288f20f667b94dece8d.js": "/cv-maker/precache-manifest.f0bd80df70286288f20f667b94dece8d.js",
+    "service-worker.js": "/cv-maker/service-worker.js",
+    "static/css/main.8726a5c8.chunk.css.map": "/cv-maker/static/css/main.8726a5c8.chunk.css.map",
+    "static/js/2.cb3bc251.chunk.js.LICENSE.txt": "/cv-maker/static/js/2.cb3bc251.chunk.js.LICENSE.txt",
+    "static/media/template_0.PNG": "/cv-maker/static/media/template_0.55490b1f.PNG",
+    "static/media/template_1.PNG": "/cv-maker/static/media/template_1.6d06ff1a.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a7f63d1.js",
+    "static/js/2.cb3bc251.chunk.js",
+    "static/css/main.8726a5c8.chunk.css",
+    "static/js/main.c928b046.chunk.js"
+  ]
+}
