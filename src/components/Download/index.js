@@ -7,7 +7,6 @@ import { PDFDownloadLink } from '@react-pdf/renderer';
 import { changeStep } from '../Home/index';
 
 const Download = ({ template, personal, schools, works, languages, skills }) => {
-  console.log(template);
   
     return (
       <main className="download__container">
