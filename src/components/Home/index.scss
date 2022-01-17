@@ -1,0 +1,29 @@
+.home__container {
+    min-width: 100vw;
+    width: 100vw;
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero__text {
+    color: rgb(0, 0, 0);
+    font-size: 31px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+    padding: 0px 10px;
+}
+
+.invite__text {
+    color: #303030;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+
+    &:nth-child(3) {
+        margin-top: 70px;
+    }
+}

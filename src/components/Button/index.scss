@@ -1,0 +1,25 @@
+.button {
+    width: 140px;
+    height: 50px;
+    color: white;
+    background-color: #2B3A67;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Fira Sans';
+    transition: all .2s ease-in-out;
+    font-size: 20px;
+
+    &:hover {
+        background-color: #16203D;
+    }
+}
+
+
+.button.cancel {
+    background-color: rgb(238, 83, 83);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: rgb(207, 60, 60);
+    }
+}

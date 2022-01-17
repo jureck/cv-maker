@@ -1,0 +1,108 @@
+.personal {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-align: center;
+        width: 100vw;
+        font-size: 31px;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 700px) {
+        width: 40vw;
+    }
+    
+    &__input {
+        height: 45px;
+        min-height: 45px;
+        padding: 0px 15px;
+        outline: none;
+        border: 2px solid #B7B7B7;
+        border-radius: 5px;
+        background-color: white;
+        
+        &-error {
+            color: rgb(250, 18, 18);
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        &.error {
+            border: 2px solid rgb(250, 18, 18);
+        }
+    }
+    
+    &__label {
+        margin: 2px 0px;
+        margin-top: 15px;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    &__controls {
+        margin: 60px 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        
+        @media (min-width: 700px) {
+            width: 40vw;
+        }
+    }
+}
+
+.photo__input {
+    cursor: pointer;
+    display: block;
+    background-color: #C4C4C4;
+    color: #3E3E3E;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    padding: 30px 0px;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.photo__name {
+    text-align: center;
+    color: rgb(4, 158, 4);
+}
