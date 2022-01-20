@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "38af5e31c9605c9d2c21dec13bdc2c6e",
+    "revision": "19745b211b1af8275b9a1441288a1da9",
     "url": "/cv-maker/index.html"
   },
   {
-    "revision": "4dc908a5259916686f8f",
-    "url": "/cv-maker/static/css/main.ffbfacc8.chunk.css"
+    "revision": "54b79a8c1d6617d04b42",
+    "url": "/cv-maker/static/css/main.f00549f8.chunk.css"
   },
   {
     "revision": "57d6285bbda4537abb3c",
@@ -16,19 +16,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cv-maker/static/js/2.34f8b806.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4dc908a5259916686f8f",
-    "url": "/cv-maker/static/js/main.0eef0835.chunk.js"
+    "revision": "54b79a8c1d6617d04b42",
+    "url": "/cv-maker/static/js/main.36ce7cc3.chunk.js"
   },
   {
     "revision": "47e0f9735a0a627e8095",
     "url": "/cv-maker/static/js/runtime-main.6a7f63d1.js"
   },
   {
-    "revision": "55490b1fd271f88bc04bd8b9cef36934",
-    "url": "/cv-maker/static/media/template_0.55490b1f.PNG"
+    "revision": "489aa807a848f153dd8363bf50014c8e",
+    "url": "/cv-maker/static/media/template_0.489aa807.PNG"
   },
   {
-    "revision": "6d06ff1a649f15b0a1bc4d487bb61da4",
-    "url": "/cv-maker/static/media/template_1.6d06ff1a.PNG"
+    "revision": "27814e118fb77a264aba4debc1255de1",
+    "url": "/cv-maker/static/media/template_1.27814e11.PNG"
   }
 ]);
