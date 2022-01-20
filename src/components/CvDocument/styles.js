@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
         educationSchools: {
           marginLeft: 10
         },
-        educationSpec: {
+        educationSchoolName: {
           fontWeight: 'bold'
         },
         workElement: {

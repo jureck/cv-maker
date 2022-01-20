@@ -7,7 +7,7 @@ const Templates = ({ setTemplate, template, changeStep }) => {
     const templatesList = Object.keys(styles);
 
     const colors = {
-        'gray': "#B5B5B5", 
+        'gray': "#e6e6e6", 
         'green': "#90C999", 
         'blue': "#91BDC7", 
         'yellow': "#F1F37B", 

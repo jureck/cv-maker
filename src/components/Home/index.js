@@ -13,7 +13,7 @@ import Download from '../Download/index';
 
 const Home = ({ changeStep }) => {
 
-    const [template, setTemplate] = useState({ color: "#b5b5b5" });
+    const [template, setTemplate] = useState({ color: "#e6e6e6" });
     const [personal, setPersonal] = useState({
         name: "",
         surname: "",
