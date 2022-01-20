@@ -34,7 +34,7 @@ const Skills = ({ skills, setSkills, changeStep, setIsCompleted }) => {
             <p className="work__title">
                 Additional skills
             </p>
-            <section className="skills__modal hidden">
+            <section className={`skills__modal ${isModalVisible ? "" : "hidden"}`}>
                 <form onSubmit={(e) => e.preventDefault()} className="form">
                     
                     <label htmlFor="skill" className="form__label">Skill</label>

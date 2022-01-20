@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#FFFFFF',
         fontFamily: 'Open Sans',
-        fontSize: 15
+        fontSize: 13
       },
       personalData: {
         marginBottom: 30,
@@ -94,9 +94,10 @@ export const styles = StyleSheet.create({
         marginTop: 5
       },
       educationSchools: {
-        marginLeft: 10
+        marginLeft: 10,
+        fontSize: 12
       },
-      educationSpec: {
+      educationSchoolName: {
         fontWeight: 'bold'
       },
       workElement: {
@@ -104,7 +105,14 @@ export const styles = StyleSheet.create({
         marginTop: 5
       },
       workInfo: {
-        marginLeft: 10
+        marginLeft: 10,
+        fontSize: 12
+      },
+      educationYears: {
+        fontSize: 12
+      },
+      workYears: {
+        fontSize: 12
       },
       workPosition: {
         fontWeight: 'bold'
@@ -125,7 +133,7 @@ export const styles = StyleSheet.create({
         fontSize: 20
       },
       photo: {
-        width: 170,
+        width: "90%",
         height: 'auto',
         marginBottom: 10
       }

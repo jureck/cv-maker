@@ -36,11 +36,11 @@ const CvDocument = ({ template, personal, schools, works, languages, skills }) =
                                         </Text>
                                     </View>
                                     <View style={styles[template.number].educationSchools}>
-                                        <Text style={styles[template.number].educationSpec}>
-                                            {school.major}
-                                        </Text>
                                         <Text style={styles[template.number].educationSchoolName}>
                                             {school.name}
+                                        </Text>
+                                        <Text style={styles[template.number].educationSpec}>
+                                            {school.major}
                                         </Text>
                                     </View>
                                 </View>
@@ -76,7 +76,7 @@ const CvDocument = ({ template, personal, schools, works, languages, skills }) =
                                         {language.language}
                                     </Text>
                                     <Text style={styles[template.number].languageLevel}>
-                                        {language.level}
+                                        - {language.level}
                                     </Text>
                                 </View>
                     })}
@@ -115,7 +115,7 @@ const CvDocument = ({ template, personal, schools, works, languages, skills }) =
                                         {language.language}
                                     </Text>
                                     <Text style={styles[template.number].languageLevel}>
-                                        {language.level}
+                                        - {language.level}
                                     </Text>
                                 </View>
                     })}
@@ -139,11 +139,11 @@ const CvDocument = ({ template, personal, schools, works, languages, skills }) =
                                     </Text>
                                 </View>
                                 <View style={styles[template.number].educationSchools}>
-                                    <Text style={styles[template.number].educationSpec}>
-                                        {school.major}
-                                    </Text>
                                     <Text style={styles[template.number].educationSchoolName}>
                                         {school.name}
+                                    </Text>
+                                    <Text style={styles[template.number].educationSpec}>
+                                        {school.major}
                                     </Text>
                                 </View>
                             </View>
