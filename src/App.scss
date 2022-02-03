@@ -19,3 +19,7 @@ body, html {
     transform: translateX(0px);
     transition: transform .3s ease-in-out;
 }
+
+* {
+    box-sizing: border-box;
+}

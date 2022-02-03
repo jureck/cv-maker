@@ -9,34 +9,33 @@ const Download = ({ template, personal, schools, works, languages, skills, chang
   
     return (
       <main className="download__container">
-        
-        <p className="download__title">
-          Your CV is ready
-        </p>
-        
+        <p className="download__title">Your CV is ready</p>
+
         <Button>
-          <PDFDownloadLink 
-              document={  <CvDocument 
-                            template={template}
-                            personal={personal}
-                            schools={schools}
-                            works={works}
-                            languages={languages}
-                            skills={skills}
-                          />} 
-              fileName={`${personal.name}'s_CV.pdf`}
+          <PDFDownloadLink
+            document={
+              <CvDocument
+                template={template}
+                personal={personal}
+                schools={schools}
+                works={works}
+                languages={languages}
+                skills={skills}
+              />
+            }
+            fileName={`${personal.name}'s_CV.pdf`}
           >
-              {({ blob, url, loading, error }) => (loading ? 'Loading...' : 'Download')}
+            {({ loading }) =>
+              loading ? "Loading..." : "Download"
+            }
           </PDFDownloadLink>
         </Button>
         <section className="form__controls">
           <span onClick={() => changeStep(7)}>
-              <Button text="Back" type="cancel" />
+            <Button text="Back" type="cancel" />
           </span>
-
-        </section>    
+        </section>
       </main>
-      
     );
 }
  

@@ -1,8 +1,9 @@
 const getYearsFromRange = (firstYear, lastYear) => {
-    const years =  [' '];
+    const years =  [];
     for(let i = firstYear; i <= lastYear; i++) {
-        years.push(i);
+        years.unshift(i);
     }
+    years.unshift(' ');
     return years;
 }
 export default getYearsFromRange;

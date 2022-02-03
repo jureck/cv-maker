@@ -11,9 +11,13 @@ import Languages from '../Languages/index';
 import Skills from '../Skills/index';
 import Download from '../Download/index';
 
-const Home = ({ changeStep }) => {
+import { PDFViewer } from '@react-pdf/renderer';
+import CvDocument from '../CvDocument';
 
-    const [template, setTemplate] = useState({ color: "#e6e6e6" });
+
+const Home = ({ changeStep, previewPosition, isPreviewOpen }) => {
+
+    const [template, setTemplate] = useState({ color: "#e6e6e6", number: '0' });
     const [personal, setPersonal] = useState({
         name: "",
         surname: "",
@@ -28,13 +32,13 @@ const Home = ({ changeStep }) => {
     const [skills, setSkills] = useState([]);
     const [isCompleted, setIsCompleted] = useState(false);
 
-    return ( 
+    return (
         <>
             <main className="home__container">
                 <p className="hero__text">
                     Create your own CV with our templates!
                 </p>
-                <span onClick={() => changeStep(0, true)} >
+                <span onClick={() => changeStep(0, true)}>
                     <Button text="Start now" />
                 </span>
                 <p className="invite__text">
@@ -47,47 +51,64 @@ const Home = ({ changeStep }) => {
                     PDF format.
                 </p>
             </main>
-            <Templates 
+            
+            <PDFViewer
+                style={{
+                    position: 'absolute',
+                    transform: previewPosition,
+                    width: '100vw',
+                    height: '300vh',
+                    overflow: 'hidden',
+                    display: isPreviewOpen ? 'block' : 'none',
+                    paddingTop: '20px',
+                    backgroundColor: '#333333',
+                }}
+            >
+                <CvDocument
+                    template={template}
+                    personal={personal}
+                    schools={schools}
+                    works={works}
+                    languages={languages}
+                    skills={skills} 
+                />
+            </PDFViewer>
+
+
+            <Templates
                 template={template}
                 setTemplate={setTemplate}
-                changeStep={changeStep}
-            />
-            <PersonalData 
+                changeStep={changeStep} />
+            <PersonalData
                 personal={personal}
                 setPersonal={setPersonal}
-                changeStep={changeStep}   
-            />
-            <Education 
+                changeStep={changeStep} />
+            <Education
                 schools={schools}
                 setSchools={setSchools}
-                changeStep={changeStep}
-            />
-            <WorkExperience 
+                changeStep={changeStep} />
+            <WorkExperience
                 works={works}
                 setWorks={setWorks}
-                changeStep={changeStep}
-            />
-            <Languages 
+                changeStep={changeStep} />
+            <Languages
                 languages={languages}
                 setLanguages={setLanguages}
-                changeStep={changeStep}
-            />
-            <Skills 
+                changeStep={changeStep} />
+            <Skills
                 skills={skills}
                 setSkills={setSkills}
                 setIsCompleted={setIsCompleted}
-                changeStep={changeStep}
-            />
+                changeStep={changeStep} />
 
-          { isCompleted &&  <Download 
+            {isCompleted && <Download
                 template={template}
                 personal={personal}
                 schools={schools}
                 works={works}
                 languages={languages}
                 skills={skills}
-                changeStep={changeStep}
-            />}
+                changeStep={changeStep} />}
         </>
     );
 }

@@ -5,6 +5,7 @@ import { styles } from '../CvDocument/styles'
 
 const Templates = ({ setTemplate, template, changeStep }) => {
     const templatesList = Object.keys(styles);
+    const colorfulTemplates = [1];
 
     const colors = {
         'gray': "#e6e6e6", 
@@ -30,25 +31,25 @@ const Templates = ({ setTemplate, template, changeStep }) => {
                     Choose template
                 </p>
                 {templatesList.map((tem, q) => {
-                    if(q === 1) return (
+                    return (
                         <React.Fragment key={q}>
         
                             <img key={q} onClick={() => { setTemplate({...template, number: tem}); changeStep(1, true) }} src={require(`../../assets/templates/template_${tem}.PNG`)} alt={`template_${tem}`} className="templates__img"/>
                             
-                            <div className="templates__colors">
-                                {Object.keys(colors).map((color) => {
-                                    return <div
-                                        key={color} 
-                                        onClick={() => selectColor(color)} 
-                                        id={color} 
-                                        className={`templates__color ${selectedColor === color ? "selected" : ""}`} 
-                                    />
-                                })}
-                            </div>
+                           { colorfulTemplates.includes(q) &&
+                                <div className="templates__colors">
+                                    {Object.keys(colors)?.map((color) => {
+                                        return <div
+                                            key={color} 
+                                            onClick={() => selectColor(color)} 
+                                            id={color} 
+                                            className={`templates__color ${selectedColor === color ? "selected" : ""}`} 
+                                        />
+                                    })}
+                                </div>
+                            }
 
                         </React.Fragment>
-                    ); else return (
-                    <img key={q} onClick={() => { setTemplate({...template, number: tem}); changeStep(1, true) }} src={require(`../../assets/templates/template_${tem}.PNG`)} alt={`template_${tem}`} className="templates__img"/>
                     )
                 })}
                 
