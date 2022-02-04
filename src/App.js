@@ -4,9 +4,6 @@ import Home from './components/Home/index';
 import Logo from './components/Logo/index';
 import Button from './components/Button/index';
 
-
-
-
 const App = () => {
 
   const appRef = useRef(null);
