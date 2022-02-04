@@ -10,82 +10,154 @@ const CvDocument = ({ template, personal, schools, works, languages, skills }) =
         return (
             <Document>
                 <Page size="A4" style={styles[template.number].page}>
+                    <View style={styles[template.number].personalData}>
+                        <View style={styles[template.number].userInfo}>
+                            <View style={styles[template.number].name}>
+                                <Text>{personal.name}</Text>
+                                <Text>{personal.surname}</Text>
+                            </View>
+                            <View style={styles[template.number].info}>
+                                <Text>{personal.email}</Text>
+                                <Text>{personal.phone}</Text>
+                                <Text>{personal.city}</Text>
+                            </View>
+                        </View>
+                        <Image
+                            style={styles[template.number].photo}
+                            src={personal.photo}
+                        />
+                    </View>
 
-                <View style={styles[template.number].personalData}>
-                    <View style={styles[template.number].userInfo}>
-                    <View style={styles[template.number].name}>
-                        <Text>{personal.name}</Text>
-                        <Text>{personal.surname}</Text>
-                    </View>
-                    <View style={styles[template.number].info}>
-                        <Text>{personal.email}</Text>
-                        <Text>{personal.phone}</Text>
-                        <Text>{personal.city}</Text>
-                    </View>
-                    </View>
-                    <Image style={styles[template.number].photo} src={personal.photo}/>
-                </View>
-
-                <Text style={styles[template.number].header}>{schools.length > 0 && 'Education'}</Text>
-                <View style={styles[template.number].education}>
-                    {schools.map((school) => {
-                        return  <View style={styles[template.number].educationElement}>
-                                    <View style={styles[template.number].educationYears}>
+                    <Text style={styles[template.number].header}>
+                        {schools.length > 0 && "Education"}
+                    </Text>
+                    <View style={styles[template.number].education}>
+                        {schools.map((school) => {
+                            return (
+                                <View
+                                    style={
+                                        styles[template.number].educationElement
+                                    }
+                                >
+                                    <View
+                                        style={
+                                            styles[template.number]
+                                                .educationYears
+                                        }
+                                    >
                                         <Text>
                                             {school.from} - {school.to}
                                         </Text>
                                     </View>
-                                    <View style={styles[template.number].educationSchools}>
-                                        <Text style={styles[template.number].educationSchoolName}>
+                                    <View
+                                        style={
+                                            styles[template.number]
+                                                .educationSchools
+                                        }
+                                    >
+                                        <Text
+                                            style={
+                                                styles[template.number]
+                                                    .educationSchoolName
+                                            }
+                                        >
                                             {school.name}
                                         </Text>
-                                        <Text style={styles[template.number].educationSpec}>
+                                        <Text
+                                            style={
+                                                styles[template.number]
+                                                    .educationSpec
+                                            }
+                                        >
                                             {school.major}
                                         </Text>
                                     </View>
                                 </View>
-                    })}
-                </View>
+                            );
+                        })}
+                    </View>
 
-                <Text style={styles[template.number].header}>{works.length > 0 && 'Work experience'}</Text>
-                <View style={styles[template.number].work}>
-                    {works.map((work) => {
-                        return  <View style={styles[template.number].workElement}>
-                                    <View style={styles[template.number].workYears}>
+                    <Text style={styles[template.number].header}>
+                        {works.length > 0 && "Work experience"}
+                    </Text>
+                    <View style={styles[template.number].work}>
+                        {works.map((work) => {
+                            return (
+                                <View
+                                    style={styles[template.number].workElement}
+                                >
+                                    <View
+                                        style={
+                                            styles[template.number].workYears
+                                        }
+                                    >
                                         <Text>
-                                            {work.monthFrom}/{work.yearFrom} - {work.monthTo}/{work.yearTo}
+                                            {work.monthFrom}/{work.yearFrom} -{" "}
+                                            {work.monthTo}/{work.yearTo}
                                         </Text>
                                     </View>
-                                    <View style={styles[template.number].workInfo}>
-                                        <Text style={styles[template.number].workPosition}>
+                                    <View
+                                        style={styles[template.number].workInfo}
+                                    >
+                                        <Text
+                                            style={
+                                                styles[template.number]
+                                                    .workPosition
+                                            }
+                                        >
                                             {work.position}
                                         </Text>
-                                        <Text style={styles[template.number].workCompanyName}>
+                                        <Text
+                                            style={
+                                                styles[template.number]
+                                                    .workCompanyName
+                                            }
+                                        >
                                             {work.name}
                                         </Text>
                                     </View>
                                 </View>
-                    })}
-                </View>
+                            );
+                        })}
+                    </View>
 
-                <Text style={styles[template.number].header}>{languages.length > 0 && 'Languages'}</Text>
-                <View style={styles[template.number].languages}>
-                    {languages.map((language) => {
-                        return  <View style={styles[template.number].languageElement}>
-                                    <Text style={styles[template.number].languageName}>
+                    <Text style={styles[template.number].header}>
+                        {languages.length > 0 && "Languages"}
+                    </Text>
+                    <View style={styles[template.number].languages}>
+                        {languages.map((language) => {
+                            return (
+                                <View
+                                    style={
+                                        styles[template.number].languageElement
+                                    }
+                                >
+                                    <Text
+                                        style={
+                                            styles[template.number].languageName
+                                        }
+                                    >
                                         {language.language}
                                     </Text>
-                                    <Text style={styles[template.number].languageLevel}>
+                                    <Text
+                                        style={
+                                            styles[template.number]
+                                                .languageLevel
+                                        }
+                                    >
                                         - {language.level}
                                     </Text>
                                 </View>
-                    })}
-                </View>
+                            );
+                        })}
+                    </View>
 
-                <Text style={styles[template.number].header}>{skills.length > 0 && 'Additional skills'}</Text>
-                {skills.map((skill, q) => {
-                    return <Text key={q}>{skill.skill}</Text>
-                })}
+                    <Text style={styles[template.number].header}>
+                        {skills.length > 0 && "Additional skills"}
+                    </Text>
+                    {skills.map((skill, q) => {
+                        return <Text key={q}>{skill.skill}</Text>;
+                    })}
                 </Page>
             </Document>
         );

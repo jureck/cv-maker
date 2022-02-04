@@ -13,9 +13,10 @@
         transition: all .2s ease-out;
         margin-top: 30px;
         cursor: pointer;
-        width: 500px;
+        width: 290px;
 
         @media (min-width: 600px) {
+            width: 500px;
             height: 700px;
         }
 
@@ -31,11 +32,16 @@
         margin-top: 10px;
         background-color: rgb(255, 255, 255);
         padding: 20px;
-        width: 500px;
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 12px #cfcfcf;
         border-radius: 7px;
+        width: 78%;
+        min-height: 75px;
+
+        @media (min-width: 600px) {
+            width: 500px;
+        }
     }
     &__color {
         width: 25px;

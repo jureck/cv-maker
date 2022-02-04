@@ -22,34 +22,23 @@ const App = () => {
   }
   
   return (
-    <>
-       <Button 
-        onClick={() => setIsPreviewOpen(!isPreviewOpen)}
-        style={{
-          width: '100px',
-          height: '60px',
-          margin: '25px 35px',
-          fontSize: '17px',
-          backgroundColor: '#F5F5F5',
-          cursor: 'pointer',
-          zIndex: 100,
-          color: 'black',
-          border: '2px solid black',
-          fontWeight: 'bold',
-        }}
-        text={isPreviewOpen ? 'CLOSE' : 'PREVIEW'}
-      />
+      <>
+          <Button
+              onClick={() => setIsPreviewOpen(!isPreviewOpen)}
+              styles={`button__preview`}
+              text={isPreviewOpen ? "CLOSE" : "PREVIEW"}
+          />
 
-      <Logo />
+          <Logo />
 
-      <div ref={appRef} className="app__container"> 
-        <Home 
-          changeStep={changeStep}
-          previewPosition={previewPosition}
-          isPreviewOpen={isPreviewOpen}
-        />
-      </div>
-    </>
+          <div ref={appRef} className="app__container">
+              <Home
+                  changeStep={changeStep}
+                  previewPosition={previewPosition}
+                  isPreviewOpen={isPreviewOpen}
+              />
+          </div>
+      </>
   );
 }
 

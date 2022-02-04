@@ -13,14 +13,40 @@
     &:hover {
         background-color: #16203D;
     }
-}
 
+   &.button__preview {
+        width: 100px;
+        height: 60px;
+        margin: 25px 35px;
+        font-size: 17px;
+        background-color: #F5F5F5;
+        cursor: pointer;
+        z-index: 100;
+        color: #2B3A67;
+        border: 2px solid #2B3A67;
+        font-weight: bold;
+    
+        @media (max-width: 500px) {
+            width: 70px;
+            height: 60px;
+            font-size: 14px;
+            margin: 25px 20px;
+        }
 
-.button.cancel {
-    background-color: rgb(238, 83, 83);
-    transition: all .2s ease-in-out;
+        &:hover {
+            background-color: #d3d3d3;
+        }
+    }
 
-    &:hover {
-        background-color: rgb(207, 60, 60);
+    &.cancel {
+        background-color: rgb(238, 83, 83);
+        transition: all .2s ease-in-out;
+    
+        &:hover {
+            background-color: rgb(207, 60, 60);
+        }
     }
 }
+
+
+

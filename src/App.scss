@@ -9,6 +9,14 @@ body, html {
     overflow-x: hidden;
 }
 
+#root {
+    z-index: 60;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .app__container {
     position: absolute;
     min-height: 100vh;
@@ -20,6 +28,4 @@ body, html {
     transition: transform .3s ease-in-out;
 }
 
-* {
-    box-sizing: border-box;
-}
+

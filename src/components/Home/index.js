@@ -11,8 +11,11 @@ import Languages from '../Languages/index';
 import Skills from '../Skills/index';
 import Download from '../Download/index';
 
-import { PDFViewer } from '@react-pdf/renderer';
+import { BlobProvider } from '@react-pdf/renderer';
 import CvDocument from '../CvDocument';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+
+import useWindowSize from '../../utils/hooks/useWindowSize';
 
 
 const Home = ({ changeStep, previewPosition, isPreviewOpen }) => {
@@ -31,6 +34,8 @@ const Home = ({ changeStep, previewPosition, isPreviewOpen }) => {
     const [languages, setLanguages] = useState([]);
     const [skills, setSkills] = useState([]);
     const [isCompleted, setIsCompleted] = useState(false);
+    let [width] = useWindowSize();
+    width = width < 850 ? width : width / 2.5;
 
     return (
         <>
@@ -41,74 +46,89 @@ const Home = ({ changeStep, previewPosition, isPreviewOpen }) => {
                 <span onClick={() => changeStep(0, true)}>
                     <Button text="Start now" />
                 </span>
-                <p className="invite__text">
-                    No programms needed.
-                </p>
-                <p className="invite__text">
-                    Easy in use.
-                </p>
-                <p className="invite__text">
-                    PDF format.
-                </p>
+                <p className="invite__text">No programms needed.</p>
+                <p className="invite__text">Easy in use.</p>
+                <p className="invite__text">PDF format.</p>
             </main>
-            
-            <PDFViewer
-                style={{
-                    position: 'absolute',
-                    transform: previewPosition,
-                    width: '100vw',
-                    height: '300vh',
-                    overflow: 'hidden',
-                    display: isPreviewOpen ? 'block' : 'none',
-                    paddingTop: '20px',
-                    backgroundColor: '#333333',
-                }}
+
+            <BlobProvider
+                document={
+                    <CvDocument
+                        template={template}
+                        personal={personal}
+                        schools={schools}
+                        works={works}
+                        languages={languages}
+                        skills={skills}
+                    />
+                }
             >
-                <CvDocument
+                {({ url }) => {
+                    return (
+                        <div
+                            className={`preview__container ${
+                                isPreviewOpen ? "visible" : ""
+                            }`}
+                            style={{
+                                transform: previewPosition,
+                            }}
+                        >
+                            <Document className="preview__document" file={url}>
+                                <Page
+                                    width={width}
+                                    scale={0.9}
+                                    className="preview__page"
+                                    pageNumber={1}
+                                />
+                            </Document>
+                        </div>
+                    );
+                }}
+            </BlobProvider>
+
+            <Templates
+                template={template}
+                setTemplate={setTemplate}
+                changeStep={changeStep}
+            />
+            <PersonalData
+                personal={personal}
+                setPersonal={setPersonal}
+                changeStep={changeStep}
+            />
+            <Education
+                schools={schools}
+                setSchools={setSchools}
+                changeStep={changeStep}
+            />
+            <WorkExperience
+                works={works}
+                setWorks={setWorks}
+                changeStep={changeStep}
+            />
+            <Languages
+                languages={languages}
+                setLanguages={setLanguages}
+                changeStep={changeStep}
+            />
+            <Skills
+                skills={skills}
+                setSkills={setSkills}
+                setIsCompleted={setIsCompleted}
+                changeStep={changeStep}
+            />
+
+            {isCompleted && (
+                <Download
                     template={template}
                     personal={personal}
                     schools={schools}
                     works={works}
                     languages={languages}
-                    skills={skills} 
+                    skills={skills}
+                    changeStep={changeStep}
                 />
-            </PDFViewer>
-
-
-            <Templates
-                template={template}
-                setTemplate={setTemplate}
-                changeStep={changeStep} />
-            <PersonalData
-                personal={personal}
-                setPersonal={setPersonal}
-                changeStep={changeStep} />
-            <Education
-                schools={schools}
-                setSchools={setSchools}
-                changeStep={changeStep} />
-            <WorkExperience
-                works={works}
-                setWorks={setWorks}
-                changeStep={changeStep} />
-            <Languages
-                languages={languages}
-                setLanguages={setLanguages}
-                changeStep={changeStep} />
-            <Skills
-                skills={skills}
-                setSkills={setSkills}
-                setIsCompleted={setIsCompleted}
-                changeStep={changeStep} />
-
-            {isCompleted && <Download
-                template={template}
-                personal={personal}
-                schools={schools}
-                works={works}
-                languages={languages}
-                skills={skills}
-                changeStep={changeStep} />}
+            )}
         </>
     );
 }
