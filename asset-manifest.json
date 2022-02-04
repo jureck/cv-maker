@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cv-maker/static/css/main.f03405d8.chunk.css",
-    "main.js": "/cv-maker/static/js/main.013a752d.chunk.js",
-    "main.js.map": "/cv-maker/static/js/main.013a752d.chunk.js.map",
+    "main.js": "/cv-maker/static/js/main.bc1a1167.chunk.js",
+    "main.js.map": "/cv-maker/static/js/main.bc1a1167.chunk.js.map",
     "runtime-main.js": "/cv-maker/static/js/runtime-main.6a7f63d1.js",
     "runtime-main.js.map": "/cv-maker/static/js/runtime-main.6a7f63d1.js.map",
     "static/js/2.e863c682.chunk.js": "/cv-maker/static/js/2.e863c682.chunk.js",
     "static/js/2.e863c682.chunk.js.map": "/cv-maker/static/js/2.e863c682.chunk.js.map",
     "ddecc7f836da38734bef0d3d2235b938.js": "/cv-maker/ddecc7f836da38734bef0d3d2235b938.js",
     "index.html": "/cv-maker/index.html",
-    "precache-manifest.6419259b1e7d54674d2062d85e9ba9d9.js": "/cv-maker/precache-manifest.6419259b1e7d54674d2062d85e9ba9d9.js",
+    "precache-manifest.e99c5614cb8efed9a71f3d96c5a6c774.js": "/cv-maker/precache-manifest.e99c5614cb8efed9a71f3d96c5a6c774.js",
     "service-worker.js": "/cv-maker/service-worker.js",
     "static/css/main.f03405d8.chunk.css.map": "/cv-maker/static/css/main.f03405d8.chunk.css.map",
     "static/js/2.e863c682.chunk.js.LICENSE.txt": "/cv-maker/static/js/2.e863c682.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.6a7f63d1.js",
     "static/js/2.e863c682.chunk.js",
     "static/css/main.f03405d8.chunk.css",
-    "static/js/main.013a752d.chunk.js"
+    "static/js/main.bc1a1167.chunk.js"
   ]
 }
